@@ -8,12 +8,14 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 # guslib lib
 add_library(guslib SHARED
     src/list.c
+    src/queue.c
     )
 
 # guslib test
 enable_testing()
 add_executable(guslib_test
     test/list_test.c
+    test/queue_test.c
     test/main.c
     )
 target_link_libraries (guslib_test
