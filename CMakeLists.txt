@@ -10,6 +10,7 @@ add_library(guslib SHARED
     src/list.c
     src/queue.c
     src/vector.c
+    src/fsm.c
     )
 
 # guslib test
@@ -18,6 +19,7 @@ add_executable(guslib_test
     test/list_test.c
     test/queue_test.c
     test/vector_test.c
+    test/fsm_test.c
     test/main.c
     )
 target_link_libraries (guslib_test
