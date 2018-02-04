@@ -1,6 +1,6 @@
 #include <stdlib.h>
-#include "ut.h"
 #include "queue.h"
+#include "ut.h"
 
 static int basic(void)
 {
