@@ -3,7 +3,7 @@ set(PROJECT_NAME guslib)
 project(guslib C)
 
 set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -std=c11")
-include_directories(${PROJECT_SOURCE_DIR}/src)
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # guslib lib
 add_library(guslib SHARED
