@@ -44,7 +44,7 @@ size_t list_size(list_t *l)
     return l->size;
 }
 
-node_t *node_create(void *data)
+static node_t *node_create(void *data)
 {
     node_t *node = malloc(sizeof(node_t));
     node->data = data;
@@ -78,8 +78,9 @@ void list_insert(list_t *l, void *data)
     }
 }
 
-void list_remove(list_t *l, node_t *node)
+void *list_remove(list_t *l, node_t *node)
 {
+    void *data = node->data;
     if (node == l->first) {
         l->first = node->next;
     } else {
@@ -92,4 +93,5 @@ void list_remove(list_t *l, node_t *node)
     }
     free(node);
     l->size--;
+    return data;
 }
