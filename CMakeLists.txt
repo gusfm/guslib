@@ -9,6 +9,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 add_library(guslib SHARED
     src/list.c
     src/queue.c
+    src/stack.c
     src/vector.c
     src/fsm.c
     src/tst.c
@@ -19,6 +20,7 @@ enable_testing()
 add_executable(guslib_test
     test/list_test.c
     test/queue_test.c
+    test/stack_test.c
     test/vector_test.c
     test/fsm_test.c
     test/tst_test.c
